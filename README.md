@@ -11,7 +11,7 @@
 
 This system leverages multiple AI agents, each specializing in different medical fields, to analyze patient reports and generate detailed medical assessments. By combining insights from various specialists, it delivers a comprehensive understanding of a patient's health status.
 
-![Agent System Workflow](https://img.shields.io/badge/AI%20Agents-Medical%20Specialists-brightgreen) ![Analysis Type](https://img.shields.io/badge/Analysis-Multidisciplinary-orange) ![Platform](https://img.shields.io/badge/Platform-Streamlit-red)
+
 
 ## 🌟 Key Features
 
