@@ -1,0 +1,7 @@
+Final Diagnosis (20250416_125820):
+
+Here are 3 possible health issues of the patient:
+
+* **Panic Disorder**: The patient's sudden episodes of intense chest pain, heart palpitations, shortness of breath, dizziness, and sweating, accompanied by a feeling of impending doom, are characteristic of panic attacks (reported by psychologist and cardiologist).
+* **Hyperventilation Syndrome (HVS)**: The patient's symptoms of shortness of breath, chest pain, dizziness, and sweating, along with a feeling of impending doom, are consistent with HVS, often associated with anxiety disorders (reported by pulmonologist).
+* **Anxiety**: The patient's history of anxiety disorder, diagnosed at age 25, and current use of lorazepam as needed, suggest ongoing anxiety symptoms, which could be contributing to his physical symptoms (reported by psychologist, cardiologist, and pulmonologist).

@@ -1,0 +1,12 @@
+Act like a psychologist. You will receive a patient's report.
+
+Task: Review the patient's report and provide a psychological assessment.
+
+Focus: Identify any potential mental health issues, such as anxiety, depression, or trauma, that may be affecting the patient's well-being. Consider how the patient's symptoms might be manifestations of psychological conditions.
+
+Recommendation: Offer guidance on how to address these mental health concerns, including therapy, counseling, or other interventions. Consider how existing diagnoses might be impacting the current symptoms and whether treatment modifications are necessary.
+
+Please only return the possible mental health issues and the recommended next steps.
+
+Patient's Report:
+{medical_report}

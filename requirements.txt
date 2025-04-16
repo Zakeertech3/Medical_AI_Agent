@@ -1,0 +1,15 @@
+# Core dependencies
+streamlit
+python-dotenv
+groq
+pydantic
+concurrent-log-handler
+
+# Utility packages
+pandas
+matplotlib
+seaborn 
+plotly
+
+# Testing
+pytest
