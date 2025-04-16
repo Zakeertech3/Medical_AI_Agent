@@ -1,10 +1,9 @@
 # 🏥 Medical AI Agent System
 
-![Medical AI Agent Banner](https://img.shields.io/badge/Medical%20AI-Agent%20System-blue?style=for-the-badge)
+
 
 > A sophisticated AI-powered medical analysis system employing specialized agents to provide comprehensive healthcare assessments.
 
-**🔗 [Live Demo](https://medicalaiagent-a9teanvbmxe46jhzmuyevh.streamlit.app/) | [Demo Video](https://github.com/user-attachments/assets/f504d425-a5f7-48cc-82d8-b547a8597ce2)**
 
 ---
 
