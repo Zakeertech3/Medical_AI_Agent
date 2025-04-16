@@ -1,72 +1,51 @@
-# 🏥 Medical AI Agent System
+# Medical AI Agent System
 
+A sophisticated AI-powered medical analysis system that employs specialized agents to provide comprehensive healthcare assessments. This system uses multiple AI agents, each specializing in different medical fields, to analyze patient reports and generate detailed medical assessments.
 
+## 🌟 Features
 
-> A sophisticated AI-powered medical analysis system employing specialized agents to provide comprehensive healthcare assessments.
+- **Specialized Medical Agents**: Multiple AI agents specializing in different medical fields:
+  - Cardiologist: Heart and cardiovascular health
+  - Psychologist: Mental health and psychological factors
+  - Pulmonologist: Respiratory system and lung health
+  - Customizable: Easy to add new specialist agents
 
-
----
-
-## ✨ Overview
-
-This system leverages multiple AI agents, each specializing in different medical fields, to analyze patient reports and generate detailed medical assessments. By combining insights from various specialists, it delivers a comprehensive understanding of a patient's health status.
-
-
-
-## 🌟 Key Features
-
-<table>
-  <tr>
-    <td width="50%">
-      <h3>🧠 Specialized Medical Agents</h3>
-      <ul>
-        <li>🫀 <b>Cardiologist:</b> Heart and cardiovascular health</li>
-        <li>🧠 <b>Psychologist:</b> Mental health evaluation</li>
-        <li>🫁 <b>Pulmonologist:</b> Respiratory system analysis</li>
-        <li>➕ <b>Extensible:</b> Easily add new specialist agents</li>
-      </ul>
-    </td>
-    <td width="50%">
-      <h3>⚙️ System Features</h3>
-      <ul>
-        <li>🔄 <b>Multidisciplinary Analysis:</b> Combined specialist insights</li>
-        <li>🖥️ <b>Interactive Interface:</b> User-friendly Streamlit UI</li>
-        <li>🔒 <b>Secure API Integration:</b> Safe data handling</li>
-        <li>📊 <b>Export Options:</b> Download results as JSON or text</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+- **Multidisciplinary Analysis**: Combines insights from multiple specialists to provide comprehensive assessments
+- **Interactive Web Interface**: User-friendly Streamlit interface for easy interaction
+- **Secure API Integration**: Safe handling of API keys and medical data
+- **Sample Reports**: Pre-loaded sample medical reports for testing
+- **Export Capabilities**: Download analysis results in JSON and text formats
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.8+
-- Groq API key
-- Required packages (listed in `requirements.txt`)
+- Python 3.8 or higher
+- Groq API key (for LLM access)
+- Required Python packages (listed in requirements.txt)
 
 ### Installation
 
-1️⃣ **Clone the repository**
+1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/healthcare_agent.git
 cd healthcare_agent
 ```
 
-2️⃣ **Set up virtual environment**
+2. Create and activate a virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3️⃣ **Install dependencies**
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4️⃣ **Configure environment**
-Create a `.env` file with the following:
+4. Set up your environment variables:
+   - Create a `.env` file in the root directory
+   - Add your Groq API key:
 ```
 GROQ_API_KEY=your_api_key_here
 GROQ_MODEL=meta-llama/llama-4-scout-17b-16e-instruct
@@ -74,91 +53,79 @@ LOG_LEVEL=INFO
 MAX_WORKERS=3
 ```
 
-### Launch Application
+### Running the Application
 
+1. Start the Streamlit app:
 ```bash
 streamlit run app.py
 ```
-Then visit: http://localhost:8501
 
-## 💡 How to Use
+2. Open your web browser and navigate to the provided local URL (typically http://localhost:8501)
 
-<table>
-  <tr>
-    <td><img src="/api/placeholder/240/180" alt="Configuration Screen"/></td>
-    <td>
-      <h3>1️⃣ Configure API</h3>
-      <p>Enter your Groq API key in the secure configuration section</p>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="/api/placeholder/240/180" alt="Report Selection"/></td>
-    <td>
-      <h3>2️⃣ Select Report</h3>
-      <p>Upload a medical report or choose from pre-loaded samples</p>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="/api/placeholder/240/180" alt="Specialist Selection"/></td>
-    <td>
-      <h3>3️⃣ Choose Specialists</h3>
-      <p>Select which medical specialists should analyze the report</p>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="/api/placeholder/240/180" alt="Analysis Process"/></td>
-    <td>
-      <h3>4️⃣ Analyze</h3>
-      <p>Start the analysis and view real-time progress</p>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="/api/placeholder/240/180" alt="Results View"/></td>
-    <td>
-      <h3>5️⃣ Review Results</h3>
-      <p>View specialist reports and download results</p>
-    </td>
-  </tr>
-</table>
+## 💡 Usage Guide
 
-## 🏗️ Technical Architecture
+1. **API Configuration**
+   - Enter your Groq API key in the configuration section
+   - The key is securely stored in the session
 
-### Core Components
+2. **Report Selection**
+   - Upload your own medical report (txt or md format)
+   - Or select from pre-loaded sample reports
+   - View the report content before analysis
 
-```mermaid
-graph TD
-    A[User Interface] --> B[Core System]
-    B --> C[Specialist Agents]
-    C --> D[LLM Integration]
-    D --> E[Response Processing]
-    E --> A
-    
-    F[File Manager] --- B
-    G[Configuration] --- B
-```
+3. **Specialist Selection**
+   - Choose which medical specialists should analyze the report
+   - Select one or more specialists based on the case
 
-### Directory Structure
+4. **Analysis**
+   - Click "Analyze Medical Report" to start the process
+   - View real-time progress of the analysis
+   - Get detailed assessments from each specialist
+   - Receive a comprehensive multidisciplinary diagnosis
+
+5. **Results**
+   - View individual specialist reports
+   - See the final multidisciplinary diagnosis
+   - Download results in JSON or text format
+
+## 🛠️ Technical Architecture
+
+- **Core Components**:
+  - Base Agent System
+  - Specialist Agents
+  - Multidisciplinary Team
+  - LLM Service Integration
+  - File Management System
+
+- **Key Technologies**:
+  - Streamlit for web interface
+  - Groq API for LLM access
+  - Concurrent processing for parallel analysis
+  - Secure file handling
+
+## 📁 Project Structure
+
 ```
 healthcare_agent/
-├── agents/              # Specialist implementations
+├── agents/               # Specialist agent implementations
 ├── config/              # Configuration files
 ├── core/                # Core system components
 ├── data/                # Data storage
-│   ├── results/         # Analysis results
-│   └── sample_reports/  # Sample medical reports
+│   ├── results/        # Analysis results
+│   └── sample_reports/ # Sample medical reports
 ├── services/            # Service implementations
 ├── templates/           # Prompt templates
 ├── utils/               # Utility functions
-├── app.py               # Main application
-├── requirements.txt     # Dependencies
-└── README.md            # Documentation
+├── app.py              # Main application
+├── requirements.txt    # Dependencies
+└── README.md           # Documentation
 ```
 
-## 🔧 Customization Guide
+## 🔧 Customization
 
-### Adding a New Specialist
+### Adding New Specialists
 
-1️⃣ **Create agent class**
+1. Create a new agent class in `agents/`:
 ```python
 from core.agent_base import BaseAgent
 
@@ -167,7 +134,7 @@ class NewSpecialist(BaseAgent):
         return "NewSpecialist"
 ```
 
-2️⃣ **Add prompt template**
+2. Add a prompt template in `templates/`:
 ```
 Act like a [specialist]. You will receive a patient's report.
 
@@ -179,15 +146,14 @@ Patient's Report:
 medical_report
 ```
 
-3️⃣ **Register in agent factory**
-Update `core/agent_factory.py` to include your new specialist.
+3. Register the agent in `core/agent_factory.py`
 
-## ⚠️ Disclaimer
+## ⚠️ Important Notes
 
-> **Important:** This application is for demonstration purposes only and should not be used for actual medical diagnosis. Always consult qualified healthcare professionals for medical advice.
-
-- Keep API keys secure and never share them
-- Handle patient data according to relevant privacy regulations
+- This is a demonstration application and should not be used for actual medical diagnosis
+- Always consult qualified healthcare professionals for medical advice
+- Keep your API keys secure and never share them
+- Patient data should be handled according to relevant privacy regulations
 
 ## 📝 License
 
@@ -199,4 +165,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-For questions or support, please open an issue in the repository.
+For questions or support, please open an issue in the repository. 
