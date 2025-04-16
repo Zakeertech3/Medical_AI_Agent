@@ -43,14 +43,27 @@ st.sidebar.title("Configuration")
 
 # API Key Configuration
 with st.sidebar.expander("API Configuration", expanded=True):
-    api_key = st.text_input(
-        "Groq API Key",
-        value=st.session_state.api_key,
-        type="password",
-        help="Enter your Groq API key to enable the AI agents"
-    )
+    # Check if running on Streamlit Cloud
+    is_streamlit_cloud = os.environ.get("STREAMLIT_CLOUD", False)
     
-    if api_key != st.session_state.api_key:
+    if is_streamlit_cloud:
+        # On Streamlit Cloud, use secrets
+        api_key = st.text_input(
+            "Groq API Key",
+            value=st.secrets.get("GROQ_API_KEY", ""),
+            type="password",
+            help="Enter your Groq API key to enable the AI agents"
+        )
+    else:
+        # Local development
+        api_key = st.text_input(
+            "Groq API Key",
+            value=st.session_state.api_key,
+            type="password",
+            help="Enter your Groq API key to enable the AI agents"
+        )
+    
+    if api_key and api_key != st.session_state.api_key:
         st.session_state.api_key = api_key
         os.environ["GROQ_API_KEY"] = api_key
         st.success("API key updated successfully!")
@@ -137,7 +150,12 @@ def run_specialist_analysis(report_content):
     st.session_state.final_diagnosis = None
     
     # Create shared LLM service for all agents
-    llm_service = LLMService()
+    try:
+        llm_service = LLMService(api_key=st.session_state.api_key)
+    except ValueError as e:
+        st.error("Please enter a valid Groq API key to enable the AI agents.")
+        st.session_state.processing = False
+        return
     
     progress_bar = st.progress(0)
     status_text = st.empty()
